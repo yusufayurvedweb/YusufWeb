@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../db/database');
+const db = require('./database');
 
 router.get('/:id', async (req, res) => {
   const { id } = req.params;
