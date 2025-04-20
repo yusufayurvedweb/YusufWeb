@@ -1,38 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yusuf Ayurved</title>
-  <link rel="stylesheet" href="tailwind.css">
-  
-</head>
-<body>
-  <header class="header">
-    <div class="logo">Yusuf Ayurved</div>
-    <nav class="nav">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#featured">Featured</a></li>
-        <li><a href="#categories">Categories</a></li>
-        <li><a href="#cart">Cart</a></li>
-        <li><a href="#account">Account</a></li>
-      </ul>
-    </nav>
-  </header>
+<html lang="en" class="no-js">
+  <head>
+    <!-- Primary Meta Tags -->
+    <title>Yusuf Ayurved</title>
+    <meta name="title" content="Yusuf Ayurved" />
+    <meta
+      name="description"
+      content="Yusuf Ayurvred is a company which provides you the best quality ayurvedic medicines.."
+    />
 
-  <section id="home" class="hero-section">
-    <h1>Stay Healthy Forever</h1>
-    <button class="shop-now-btn">Shop Now</button>
-  </section>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.yusufayurved.com/" />
+    <meta
+      property="og:title"
+      content="Yusuf Ayurved"
+    />
+    <meta
+      property="og:description"
+      content="Yusuf Ayurvred is a company which provides you the best quality ayurvedic medicines."
+    />
+    <meta
+      property="og:image"
+      content="https://www.vigorindustries.com/assets/og-banner.jpg"
+    />
 
-  <section id="categories" class="category-section">
-    <h2>Shop By Category</h2>
-    <div class="categories">
-      <!-- Categories dynamically loaded here -->
-    </div>
-  </section>
-  <section id="products-section">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.vigorindustries.com/" />
+    <meta
+      name="twitter:title"
+      content="Vigor Industries Limited | Global Conglomerate of Innovation"
+    />
+    <meta
+      name="twitter:description"
+      content="A futuristic industrial conglomerate. Dive into Vigor’s ecosystem of innovation."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.vigorindustries.com/assets/twitter-banner.jpg"
+    />
+
+    <!-- SEO Meta -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Vigor Industries Limited" />
+    <meta
+      name="keywords"
+      content="Vigor Industries, Mining, Infrastructure, AI, Technology, Space, Healthcare, Power, Retail, Global Conglomerate, Vigor India, Vigor Space Research, Vigor Infotech, Vigor Steels, Vigor Medical, Vigor Motors"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+  <body class="loading">
+    <!-- Loader -->
+    <div id="loader" class="loader"></div>
+
+    <!-- Header -->
+    <header>
+      <img src="Yusuflogo.PNG" width="105" /><br />
+      <br />
+      <div class="logo">Yusuf Ayurved Limited</div>
+      <div id="userPanel"></div>
+      <button id="menuToggle">☰</button>
+      <nav id="navDrawer" class="nav-drawer">
+        <a href="#home">Home</a>
+        <a href="#procurement">Procurement</a>
+        <a href="#careers">Careers</a>
+        <a href="#updates">Updates</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#settings">Settings</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero animate-on-scroll">
+      <h1>Stay Healthy With Yusuf Ayurved</h1>
+      <p>Live Long With Our Produts</p>
+    </section>
+
+    <!-- Subsidiaries -->
+<section id="products-section">
     <h2>Featured Products</h2>
     <div id="carousel-container">
         <div id="carousel" class="carousel-scroll"></div>
@@ -40,21 +90,108 @@
     <h2>Latest Arrivals</h2>
     
 </section>
+    <div id="feed" class="product-feed"></div>
+    <br />
 
-  <div id="latest-arrivals" class="product-grid">
+    <section id="careers" class="subsidiary-card1 animate-on-scroll">
+      <h2>Careers & Opportunities</h2>
+      <p>
+        Join our movement. Build your future with Yusuf Ayurved. We are open to
+        hier on the basis of your qualification and experience. Join our journey
+        to success. Contact our hiering team :- <br /><br /><button>
+          <a href="https://wa.me/919039980219">Hiring Team</a>
+        </button>
+      </p>
+    </section>
+    <br />
+    <!-- Settings Panel 
+  <section id="settings" class="settings-section animate-on-scroll">
+    <h2>Preferences</h2>
+    <form id="settingsForm">
+      <label for="theme">Theme</label>
+      <select id="theme">
+        <option value="metallic">Metallic</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
 
-  </div>
+      <label for="language">Language</label>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="jp">Japanese</option>
+      </select>
 
+      <button type="submit">Save Settings</button>
+    </form>
+  </section> -->
 
+    <section id="about" class="subsidiary-card1 animate-on-scroll">
+      <div class="about-div">
+        <h2 class="section-title">About Yusuf Ayurveda</h2>
+        <br />
+        <p class="lead">
+          Yusuf Ayurved is continously indulged in medical based research for
+          providing everyone an ayurvedic medicine for their disease. We are
+          commited to provide you the best medicine for your illness with least
+          side effects. Our this commitment has resulted in a mass movement and
+          a revolution in lives of thousands who were once frustated with their
+          bad health and side effects of allopathic medicines.
+        </p>
+        <br />
+        
+        <div class="about-block">
+          <h3>Mission</h3>
+          <br />
+          <ul>
+            <li>
+            Provide best ayurvedic medicine for all your illness
+            </li>
+            <li>
+        Increase the life span and improve your overall health
+            </li>
+            <li>
+              Build India’s strongest indigenous defense and space technologies.
+            </li>
+            
+          </ul>
+        </div>
+        <br />
+        <div id="board" class="board">
+          <h3>Board Members</h3>
+          <br />
+          <ul>
+            <li><strong>Nahid Khan</strong> – Chairman (Promoter)</li>
+            <li><strong>Faizan Khan</strong> – Managing Director (Promoter)</li>
+          </ul>
+        </div>
+        <br />
+        <div class="about-block">
+          <h3>Corporate Headquarters</h3>
+          <br />
+          <address>
+            Yusuf Ayurved Headquaters<br />
+            Address<br />
+            Address<br />
+            Balaghat, Madhya Pradesh<br />
+            India<br />
+            <br /><br>
+            <div class="map-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14726.590970163982!2d81.73907945786543!3d21.09696232995192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28ded038eedffd%3A0x9aefc7d35a1118d4!2sCentral%20Business%20District%2C%20Nava%20Raipur%2C%20Chhattisgarh!5e0!3m2!1sen!2sin!4v1712739979815!5m2!1sen!2sin" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </address>
+        </div>
+        <br />
 
-
-<div id="feed" class="product-feed"></div>
-
-
-<div class="about-block">
+        <div class="about-block">
           <h3>Contact Us</h3>
           <ul>
-            <li>Email: vigorindustrieslimited@gmail.com</li>
+            <li>Email: support@yusufayurved.com</li>
             <li>Phone: +91 9691786345</li>
             <li>
               Social: <strong>@Yusuf_Ayurved_Limited</strong> on LinkedIn,
@@ -62,13 +199,14 @@
             </li>
           </ul>
         </div>
-  <footer class="footer">
-    <p>&copy; 2025 Yusuf Ayurved. All rights reserved.</p>
-  </footer>
+      </div>
+    </section>
 
-  <script defer src="app.js"></script>
-</body>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Yusuf Ayurved Limited. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
-
-<!-- Separate CSS File: styles.css -->
-
