@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Stylish T-Shirt",
+        "description": "Comfortable cotton T-shirt in various colors.",
+        "price": 19.99,
+        "image_url": "Yusuflogo.png",
+        "category": "mens"
+    },
+    {
+        "id": 2,
+        "name": "Elegant Dress",
+        "description": "Perfect dress for a night out, with a modern design.",
+        "price": 49.99,
+        "image_url": "Ysuflogo.png",
+        "category": ""
+    },
+    {
+        "id": 3,
+        "name": "Cool Jeans",
+        "description": "Denim jeans with a trendy, slim fit.",
+        "price": 39.99,
+        "image_url": "Yusuflogo.png",
+        "category": ""
+    },
+    {
+        "id": 4,
+        "name": "Classic Watch",
+        "description": "A timeless watch that goes with any outfit.",
+        "price": 89.99,
+        "image_url": "Yusuflogo.png",
+        "category": ""
+    },
+    {
+        "id": 5,
+        "name": "Casual Shoes",
+        "description": "Casual shoes perfect for everyday wear.",
+        "price": 59.99,
+        "image_url": "Yusuflogo.png",
+        "category": ""
+    },
+    {
+        "id": 6,
+        "name": "Sunglasses",
+        "description": "Fashionable sunglasses to complement your look.",
+        "price": 25.0,
+        "image_url": "Yusuflogo.png",
+        "category": ""
+    },
+    {
+        "id": 7,
+        "name": "Leather Jacket",
+        "description": "A stylish leather jacket for a bold look.",
+        "price": 129.99,
+        "image_url": "/images/Yusuflogo.png",
+        "category": ""
+    },
+    {
+        "id": 8,
+        "name": "Jacket",
+        "description": "A warm jacket for cold weather.",
+        "price": 79.99,
+        "image_url": "/images/Yusuflogo.png",
+        "category": ""
+    },
+    {
+        "id": 9,
+        "name": "Handbag",
+        "description": "A stylish handbag for any occasion.",
+        "price": 99.99,
+        "image_url": "/images/Yusuflogo.png",
+        "category": ""
+    },
+    {
+        "id": 10,
+        "name": "Sneakers",
+        "description": "Sporty sneakers for active lifestyles.",
+        "price": 64.99,
+        "image_url": "/images/yusuflogo.png",
+        "category": ""
+    }
+]
