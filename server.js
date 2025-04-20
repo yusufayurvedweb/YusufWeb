@@ -13,13 +13,7 @@ app.use(express.json());
 // API routes
 app.use('/api/products', productsRoutes);
 
-// Serve static files (index.html, CSS, JS, images, etc.)
-app.use(express.static(path.join(__dirname)));
 
-// For SPA routes like defpage.html
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
 
 // Start server
 app.listen(PORT, () => {
