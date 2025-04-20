@@ -6,7 +6,7 @@ const app = express();
 app.use(cors()); // 🛑 This must come BEFORE your routes
 
 app.use(express.json());
-const productsRoutes = require('./products');
+const productsRoutes = require('products');
 app.use('/api/products', productsRoutes);
 
 
