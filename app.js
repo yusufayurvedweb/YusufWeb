@@ -3,7 +3,7 @@
 // Fetch products from the backend server
 async function fetchProducts() {
   try {
-    const response = await fetch('http://localhost:10000/api/products');
+    const response = await fetch('https://yusufweb-org.onrender.com/api/products');
     const products = await response.json();
 
     // Check if products exist and then display them
