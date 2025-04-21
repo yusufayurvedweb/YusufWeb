@@ -31,12 +31,13 @@ document.addEventListener('DOMContentLoaded', async () => {
       <div >
         <img src="${product.image}" alt="${product.name}" class="carousel-item" width=200/>
         <div class="product-grid">
+        <div class="desc">
           <h2>${product.name}</h2>
           <p class="price">Price: ₹${product.price}</p>
-          <p class="description">${product.description || "No description available."}</p>
+          <p class="description">${product.description || "No description available."}</p><br>
           <button class="shop-now-btn">Buy Now</button>
         </div>
-      </div>
+      </div></div>
     `;
   }
 
