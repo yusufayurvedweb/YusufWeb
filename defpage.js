@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   
     if (!productId) {
       console.error("Product ID not found in URL");
-      document.getElementById('product-details').innerHTML = '<p>Product not found.</p>';
+      document.getElementById('carousel').innerHTML = '<p>Product not found.</p>';
       return;
     }
   
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       displayProductDetails(product);
     } catch (error) {
       console.error('Failed to fetch product details:', error);
-      document.getElementById('product-details').innerHTML = '<p>Error loading product details.</p>';
+      document.getElementById('carousel').innerHTML = '<p>Error loading product details.</p>';
     }
   });
   
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     container.innerHTML = `
       
         <img src="${product.image}" alt="${product.name}" class="carousel-image" width=200/>
-        <div class="product-grid">
+        <div class="desc">
           <h2>${product.name}</h2>
           <p class="price">Price: ₹${product.price}</p>
           <p class="description">${product.description || "No description available."}</p>
