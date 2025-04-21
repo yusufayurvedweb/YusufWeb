@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   
     try {
-      const response = await fetch(`https://yusufweb-org.onrender.com/api/products/${productId}`);
+      const response = await fetch(`'https://yusufweb-org.onrender.com/api/products/${productId}`);
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
   
       const product = await response.json();
