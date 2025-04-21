@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <h2>${product.name}</h2>
           <p class="price">Price: ₹${product.price}</p>
           <p class="description">${product.description || "No description available."}</p>
-          <button class="shop-now">Buy Now</button>
+          <button class="shop-now-btn">Buy Now</button>
         </div>
       </div>
     `;
