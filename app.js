@@ -47,7 +47,7 @@ function displayCarousel(products) {
     item.innerHTML = `
       <a href="defpage.html?id=${product.id}"><img src="${product.image}" alt="${product.name}" class="carousel-image">
       <h3>${product.name}</h3>
-      <p>$${product.price}</p></a>
+      <p>₹${product.price}</p></a>
     `;
     carousel.appendChild(item);
   });
