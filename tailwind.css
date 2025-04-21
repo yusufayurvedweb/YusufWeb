@@ -185,16 +185,7 @@ padding: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
   }
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
-}
 
-.animate-on-scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 .about-section {
   padding: 3rem 2rem;
   margin: 1rem auto;
