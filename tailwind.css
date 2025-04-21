@@ -28,7 +28,7 @@
 }
 .nav-drawer a {
   padding: 0.5rem;
-  color: white;
+  color: green;
   text-decoration: none;
   transition: background 0.3s;
 }
