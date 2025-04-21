@@ -15,6 +15,17 @@
   color: white;
   cursor: pointer;
 }
+.nav-drawer {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background: #222;
+  box-shadow: -3px 3px 10px var(--shadow);
+  padding: 1rem;
+  border-radius: var(--radius);
+}
 .nav-drawer a {
   padding: 0.5rem;
   color: white;
