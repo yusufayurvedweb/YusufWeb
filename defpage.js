@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
   
   function displayProductDetails(product) {
-    const container = document.getElementById('product-grid');
+    const container = document.getElementById('carousel-scroll');
     container.innerHTML = `
       <div >
-        <img src="${product.image}" alt="${product.name}" class="carousel-image" width=200/>
+        <img src="${product.image}" alt="${product.name}" class="carousel-item" width=200/>
         <div class="product-grid">
           <h2>${product.name}</h2>
           <p class="price">Price: ₹${product.price}</p>
