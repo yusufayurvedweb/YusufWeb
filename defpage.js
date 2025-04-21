@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     container.innerHTML = `
       <div>
         <img src="${product.image}" alt="${product.name}" class="carousel-image" width=200/>
-        <div class="desc">
+        <div class="carousel-scroll">
           <h2>${product.name}</h2>
           <p class="price">Price: ₹${product.price}</p>
           <p class="description">${product.description || "No description available."}</p>
