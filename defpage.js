@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       console.error('Failed to fetch product details:', error);
       document.getElementById('carousel').innerHTML = '<p>Error loading product details.</p>';
     }
-  };
+  }
   
   function displayProductDetails(product) {
     const container = document.getElementById('carousel-scroll');
