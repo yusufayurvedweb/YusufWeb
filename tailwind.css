@@ -7,7 +7,14 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
   }
-  
+  #menuToggle {
+  align-content: right;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
   body {
     background-color: #cfcece; /* Light Pink background */
     color: #4d7e51; /* Deep Red text */
