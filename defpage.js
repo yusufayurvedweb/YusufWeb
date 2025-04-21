@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
-
+    
   
     if (!productId) {
       console.error("Product ID not found in URL");
@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       console.log("Fetched Product:", product);
   
       displayProductDetails(product);
-    } catch (error) {
+    } 
+    catch (error) {
       console.error('Failed to fetch product details:', error);
       document.getElementById('carousel').innerHTML = '<p>Error loading product details.</p>';
     }
