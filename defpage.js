@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
   
   function displayProductDetails(product) {
-    const container = document.getElementById('product-grid');
+    const container = document.getElementById('carousel');
     container.innerHTML = `
       <div >
         <img src="${product.image}" alt="${product.name}" class="carousel-image" width=200/>
