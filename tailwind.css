@@ -15,6 +15,16 @@
   color: white;
   cursor: pointer;
 }
+.nav-drawer a {
+  padding: 0.5rem;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+applet.nav-drawer a:hover {
+  background: #444;
+  border-radius: var(--radius);
+}
   body {
     background-color: #cfcece; /* Light Pink background */
     color: #4d7e51; /* Deep Red text */
