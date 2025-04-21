@@ -196,7 +196,16 @@ padding: 2rem;
   box-shadow: 0 5px 15px var(--shadow);
   animation: fadeIn 1s ease-in;
 }
-
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  min-height: 300px;
+}
+.map-container {
+  width: 100%;
+  height: 100%;
+}
 
   
   /* Footer */
