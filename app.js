@@ -65,7 +65,7 @@ function displayFeed(products) {
     item.innerHTML = `
       <img src="${product.image}" alt="${product.name}" class="product-image">
       <h4>${product.name}</h4>
-      <p>$${product.price}</p>
+      <p>₹${product.price}</p>
     `;
     feed.appendChild(item);
   });
