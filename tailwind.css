@@ -7,9 +7,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
   }
-cent{
-    align-items: center;
-}
+
   #menuToggle {
   align-content: right;
   font-size: 1.5rem;
