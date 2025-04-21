@@ -8,6 +8,52 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
 }
+.carousel-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.carousel-item {
+    background: #f0fff4;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item:hover {
+    transform: scale(1.05);
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.feed-item {
+    display: inline-block;
+    width: 30%;
+    margin: 20px;
+    background: #e6ffee;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feed-item img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
 #menuToggle {
   align-content: right;
   font-size: 1.5rem;
