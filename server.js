@@ -1,9 +1,12 @@
+// server.js
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const productsRoutes = require('./routes/products'); // Your route file
 const mysql = require('mysql2');
 const nodemailer = require('nodemailer');
+require('dotenv').config(); // Load DB credentials securely
+
+const productsRoutes = require('./routes/products'); // Your product routes
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -12,15 +15,21 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// API routes
-app.use('/api/products', productsRoutes);
-
-// ---------------- NEW CODE: Database and Email Setup ------------------ //
-
 // MySQL Connection
 const db = mysql.createConnection({
-  host : "mysql-22404967-yusufayurvedwebsite.j.aivencloud.com", port: 11857, user : "avnadmin", password : "AVNS_UJXfbFkb9e7s50oTzkl", database : "defaultdb"
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME
+});
 
+db.connect((err) => {
+  if (err) {
+    console.error('❌ Database connection failed:', err);
+    process.exit(1);
+  }
+  console.log('✅ Connected to MySQL Database');
 });
 
 // Create 'sales' table if not exists
@@ -37,40 +46,42 @@ db.query(`
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   )
 `, (err) => {
-  if (err) console.error("Failed to create 'sales' table:", err);
-  else console.log("'sales' table is ready.");
+  if (err) console.error("❌ Failed to create 'sales' table:", err);
+  else console.log("✅ 'sales' table ready.");
 });
 
-// Nodemailer setup
+// Email Setup
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'yourbusinessmail@gmail.com',    // replace with your Gmail ID
-    pass: 'yourapppassword'                 // use an App Password (not Gmail account password)
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
   }
 });
 
-// API endpoint to save order
+// API Routes
+app.use('/api/products', productsRoutes);
+
+// Order Save API
 app.post('/saveOrder', (req, res) => {
   const { name, phone, address, product, quantity, transactionId, totalAmount } = req.body;
 
   if (!name || !phone || !address || !product || !quantity || !transactionId || !totalAmount) {
-    return res.status(400).send('All fields are required.');
+    return res.status(400).json({ message: '⚠️ All fields are required.' });
   }
 
-  // Save into MySQL
   const sql = "INSERT INTO sales (name, phone, address, product, quantity, transactionId, totalAmount) VALUES (?, ?, ?, ?, ?, ?, ?)";
   db.query(sql, [name, phone, address, product, quantity, transactionId, totalAmount], (err, result) => {
     if (err) {
-      console.error("Database insert error:", err);
-      return res.status(500).send('Database error');
+      console.error("❌ Database insert error:", err);
+      return res.status(500).json({ message: 'Internal Server Error' });
     }
 
-    // Send email after successful database save
+    // Send notification email
     const mailOptions = {
-      from: 'yourbusinessmail@gmail.com',
+      from: process.env.EMAIL_USER,
       to: 'abhishek.tiwari0253@gmail.com',
-      subject: 'New Order Received - Yusuf Ayurved',
+      subject: '🛒 New Order Received - Yusuf Ayurved',
       text: `
 New Order Details:
 Name: ${name}
@@ -85,19 +96,17 @@ Total Amount: ₹${totalAmount}
 
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-        console.error("Failed to send email:", error);
+        console.error("❌ Failed to send email:", error);
       } else {
-        console.log('Order email sent:', info.response);
+        console.log('✅ Order email sent:', info.response);
       }
     });
 
-    res.send('Order saved and email sent successfully.');
+    res.status(200).json({ message: 'Order saved and email sent successfully.' });
   });
 });
 
-// ---------------- END of new code ------------------ //
-
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });
