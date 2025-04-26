@@ -4,7 +4,7 @@ const cors = require('cors');
 const path = require('path');
 const mysql = require('mysql2');
 const nodemailer = require('nodemailer');
-require('dotenv').config(); // Load DB credentials securely
+require('.env').config(); // Load DB credentials securely
 
 const productsRoutes = require('./routes/products'); // Your product routes
 
