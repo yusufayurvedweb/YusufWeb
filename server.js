@@ -19,10 +19,8 @@ app.use('/api/products', productsRoutes);
 
 // MySQL Connection
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'yourpassword', // replace with your MySQL root password
-  database: 'yourdatabase'   // replace with your database name
+  host : "mysql-22404967-yusufayurvedwebsite.j.aivencloud.com", port: 11857, user : "avnadmin", password : "AVNS_UJXfbFkb9e7s50oTzkl", database : "defaultdb"
+
 });
 
 // Create 'sales' table if not exists
