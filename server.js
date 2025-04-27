@@ -1,9 +1,9 @@
 // server.js
-const express = require('express');
-const cors = require('cors');
-const path = require('path');
-const mysql = require('mysql2');
 import fetch from 'node-fetch';
+import express from 'express';
+import cors from 'cors';
+import path from 'path';
+import mysql from 'mysql12';
 
 
 const productsRoutes = require('./routes/products'); // Your product routes
