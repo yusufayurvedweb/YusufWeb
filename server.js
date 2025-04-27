@@ -78,21 +78,37 @@ app.post('/saveOrder', (req, res) => {
     }
 
     // Send notification email
-    const mailOptions = {
-      from: "yusufayurvedwebsite@gmail.com",
-      to: 'abhishek.tiwari0253@gmail.com',
-      subject: '🛒 New Order Received - Yusuf Ayurved',
-      text: `
-New Order Details:
-Name: ${name}
-Phone: ${phone}
-Address: ${address}
-Product: ${product}
-Quantity: ${quantity}
-Transaction ID: ${transactionId}
-Total Amount: ₹${totalAmount}
-      `
-    };
+    // Send email through Formspree
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args)); // Dynamic import for fetch
+
+const formspreeEndpoint = "https://formspree.io/f/{your-form-id}"; // Replace with your actual Form ID
+
+fetch(formspreeEndpoint, {
+  method: "POST",
+  headers: {
+    "Accept": "application/json",
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    name,
+    phone,
+    address,
+    product,
+    quantity,
+    transactionId,
+    totalAmount
+  })
+})
+.then(response => {
+  if (response.ok) {
+    console.log('✅ Order email sent via Formspree.');
+  } else {
+    console.error('❌ Failed to send email via Formspree.');
+  }
+})
+.catch(error => {
+  console.error('❌ Error sending email via Formspree:', error);
+});
 
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
