@@ -17,11 +17,11 @@ app.use(express.json());
 
 // MySQL Connection
 const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME
+host: "mysql-22404967-yusufayurvedwebsite.j.aivencloud.com"
+port: 11857
+user: "avnadmin"
+password: "AVNS_UJXfbFkb9e7s50oTzkl"
+database: "defaultdb"
 });
 
 db.connect((err) => {
