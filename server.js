@@ -51,13 +51,7 @@ db.query(`
 });
 
 // Email Setup
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: "yusufayurvedwebsite@gmail.com",
-    pass: "fzrf khzc ksgx qtbh"
-  }
-});
+
 
 // API Routes
 app.use('/api/products', productsRoutes);
