@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const mysql = require('mysql2');
-const nodemailer = require('nodemailer');
+
 // Load DB credentials securely
 
 const productsRoutes = require('./routes/products'); // Your product routes
@@ -81,7 +81,7 @@ app.post('/saveOrder', (req, res) => {
     // Send email through Formspree
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args)); // Dynamic import for fetch
 
-const formspreeEndpoint = "https://formspree.io/f/{your-form-id}"; // Replace with your actual Form ID
+const formspreeEndpoint = "https://formspree.io/f/mpwdwlqn"; // Replace with your actual Form ID
 
 fetch(formspreeEndpoint, {
   method: "POST",
