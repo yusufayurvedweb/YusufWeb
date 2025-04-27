@@ -4,8 +4,7 @@ const cors = require('cors');
 const path = require('path');
 const mysql = require('mysql2');
 import fetch from 'node-fetch';
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
-// Load DB credentials securely
+
 
 const productsRoutes = require('./routes/products'); // Your product routes
 
