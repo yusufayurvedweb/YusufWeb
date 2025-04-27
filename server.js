@@ -4,6 +4,7 @@ import express from 'express';
 import cors from 'cors';
 import path from 'path';
 import mysql from 'mysql2';
+import axios from 'axios';
 
 import productsRoutes from './routes/products.js';
 // Your product routes
@@ -104,13 +105,7 @@ fetch(formspreeEndpoint, {
   console.error('❌ Error sending email via Formspree:', error);
 });
 
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.error("❌ Failed to send email:", error);
-      } else {
-        console.log('✅ Order email sent:', info.response);
-      }
-    });
+    
 
     res.status(200).json({ message: 'Order saved and email sent successfully.' });
   });
