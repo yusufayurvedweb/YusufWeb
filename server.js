@@ -4,7 +4,7 @@ const cors = require('cors');
 const path = require('path');
 const mysql = require('mysql2');
 const nodemailer = require('nodemailer');
-require('.env').config(); // Load DB credentials securely
+// Load DB credentials securely
 
 const productsRoutes = require('./routes/products'); // Your product routes
 
@@ -54,7 +54,7 @@ db.query(`
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER,
+    user: yusufayurvedwebsite@gmail.com,
     pass: process.env.EMAIL_PASS
   }
 });
@@ -79,7 +79,7 @@ app.post('/saveOrder', (req, res) => {
 
     // Send notification email
     const mailOptions = {
-      from: process.env.EMAIL_USER,
+      from: yusufayurvedwebsite@gmail.com,
       to: 'abhishek.tiwari0253@gmail.com',
       subject: '🛒 New Order Received - Yusuf Ayurved',
       text: `
