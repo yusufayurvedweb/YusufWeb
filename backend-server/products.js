@@ -1,6 +1,6 @@
 import express from 'express';
 const router = express.Router();
-import db from './db/database';
+import db from './db/database.js';
 
 router.get('/:id', async (req, res) => {
   const { id } = req.params;
