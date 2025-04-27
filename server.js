@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
-import mysql from 'mysql12';
+import mysql from 'mysql2';
 
 import productsRoutes from './routes/products.js';
 // Your product routes
