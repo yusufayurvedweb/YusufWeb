@@ -79,7 +79,7 @@ app.post('/saveOrder', (req, res) => {
 
     // Send notification email
     const mailOptions = {
-      from: yusufayurvedwebsite@gmail.com,
+      from: "yusufayurvedwebsite@gmail.com",
       to: 'abhishek.tiwari0253@gmail.com',
       subject: '🛒 New Order Received - Yusuf Ayurved',
       text: `
