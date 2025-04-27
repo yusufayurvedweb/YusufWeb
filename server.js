@@ -54,8 +54,8 @@ db.query(`
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: yusufayurvedwebsite@gmail.com,
-    pass: process.env.EMAIL_PASS
+    user: "yusufayurvedwebsite@gmail.com",
+    pass: "fzrf khzc ksgx qtbh"
   }
 });
 
