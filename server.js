@@ -5,7 +5,7 @@ import cors from 'cors';
 import path from 'path';
 import mysql from 'mysql2';
 
-import productsRoutes from './routes/products';
+import productsRoutes from './routes/products.js';
 // Your product routes
 
 const app = express();
