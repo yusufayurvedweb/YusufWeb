@@ -5,8 +5,8 @@ import cors from 'cors';
 import path from 'path';
 import mysql from 'mysql12';
 
-
-const productsRoutes = require('./routes/products'); // Your product routes
+import productsRoutes from './routes/products.js';
+// Your product routes
 
 const app = express();
 const PORT = process.env.PORT || 5000;
