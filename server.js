@@ -6,7 +6,7 @@ import path from 'path';
 import mysql from 'mysql2';
 import axios from 'axios';
 
-import productsRoutes from './routes/products.js';
+import productsRoutes from './routes/products';
 // Your product routes
 
 const app = express();
